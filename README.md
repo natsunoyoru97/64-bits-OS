@@ -1,7 +1,9 @@
 # 64-bits-OS
 根据《一个64位操作系统的设计与实现》实现的操作系统
 
-An OS based on [this book](https://book.douban.com/subject/30222325/).
+An OS based on [this book](https://book.douban.com/subject/30222325/). Developed under Ubuntu 18.04.
+
+The source code is under git version control, so you can revert to the snapshots of the program to look up the code in any chapter.
 
 **Chinese README will be updated.**
 

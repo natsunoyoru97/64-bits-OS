@@ -92,7 +92,7 @@ Label_Start:
 ;=======	search loader.bin
 	mov	word	[SectorNo],	SectorNumOfRootDirStart
 
-Label_Search_In_Root_Dir_Begin:
+Lable_Search_In_Root_Dir_Begin:
 
 	cmp	word	[RootDirSizeForLoop],	0
 	jz	Label_No_LoaderBin
@@ -140,7 +140,7 @@ Label_Different:
 Label_Goto_Next_Sector_In_Root_Dir:
 	
 	add	word	[SectorNo],	1
-	jmp	Label_Search_In_Root_Dir_Begin
+	jmp	Lable_Search_In_Root_Dir_Begin
 	
 ;=======	display on screen : ERROR:No LOADER Found
 
@@ -280,8 +280,8 @@ Odd			db	0
 
 ;=======	display messages
 
-StartBootMessage:	db	"Start Booting"
-NoLoaderMessage:	db	"ERROR: No LOADER Found"
+StartBootMessage:	db	"Start Boot"
+NoLoaderMessage:	db	"ERROR:No LOADER Found"
 LoaderFileName:		db	"LOADER  BIN",0
 
 ;=======	fill zero until whole sector

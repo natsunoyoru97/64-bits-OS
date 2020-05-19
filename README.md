@@ -1,11 +1,16 @@
 # 64-bits-OS
 根据《一个64位操作系统的设计与实现》实现的操作系统
 
-An OS based on [this book](https://book.douban.com/subject/30222325/). Developed under Ubuntu 18.04.
+![](https://img.shields.io/badge/Ubuntu-18.04-success)
+![](https://img.shields.io/badge/Parallels-15.1.4-success)
 
-The source code is under git version control, so you can revert to the snapshots of the program to look up the code in any chapter.
+An OS based on [this book](https://book.douban.com/subject/30222325/).
 
-**Chinese README will be updated.**
+The source code is under git version control, so you can revert to the snapshots(commits) of the program to look up the code in any chapter.
+
+**Chinese README will be updated. I can only type in English in my virtual machine, the docs in Chinese will be updated after the code part is finished, or it may corrupt the cleanness the commits (and you guys will have a hard time to find the commits you want to revert to :) ).**
+
+I also made some modification in Makefile, so it's easier to run these codes in bochs.
 
 # Get Started
 - Have your bochs COMPLIED rather than downloaded from the package managers, life would be much easier when you debug the kernel.

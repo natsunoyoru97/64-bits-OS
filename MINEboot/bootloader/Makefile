@@ -29,7 +29,7 @@ loader.bin:
 	nasm loader.asm -o loader.bin
 
 kernel.bin:
-	cd ../kernel && make
+	cd ../kernel && make clean && make
 	cd ../bootloader
 
 write:

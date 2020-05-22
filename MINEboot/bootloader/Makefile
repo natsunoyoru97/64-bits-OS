@@ -15,6 +15,8 @@
 
 all: 
 	make refresh
+	# In case the boot.img is already mounted (say an error arised)
+	#sudo umount tmp/
 	make write
 	make run
 
@@ -27,7 +29,8 @@ loader.bin:
 	nasm loader.asm -o loader.bin
 
 kernel.bin:
-	nasm kernel.asm -o kernel.bin
+	cd ../kernel && make
+	cd ../bootloader
 
 write:
 	dd if=boot.bin of=boot.img bs=512 count=1 conv=notrunc
@@ -37,7 +40,7 @@ write:
 	# To run in Ubuntu 18.04, you need sudo privilege. 
 	sudo mount -t vfat -o loop boot.img tmp/
 	sudo cp loader.bin tmp/
-	sudo cp kernel.bin tmp/
+	sudo cp ../kernel/kernel.bin tmp/
 	sync
 	sudo umount tmp/
 	rm -r tmp/
@@ -47,7 +50,8 @@ refresh:
 	make generate
 
 clean:
-	rm -rf *.bin *.asm~ Makefile~ loader.bin boot.bin kernel.bin
+	rm -rf *.bin *.asm~ Makefile~ loader.bin boot.bin ../kernel/kernel.bin
 
 run:
 	bochs -f myBochsSrc.txt
+	

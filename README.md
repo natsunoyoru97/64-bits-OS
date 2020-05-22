@@ -1,5 +1,4 @@
 # 64-bits-OS
-根据《一个64位操作系统的设计与实现》实现的操作系统
 
 ![](https://img.shields.io/badge/Ubuntu-18.04-success)
 ![](https://img.shields.io/badge/Parallels-15.1.4-success)
@@ -34,7 +33,7 @@ cp iodev/hdimage/vbox.cpp iodev/hdimage/vbox.cc
 ```
 - Run ``make install``. 
 - If you encounter with the ``recipe for target 'install_bin' failed`` error, you may not have privilege. Try ``sudo make install`` instead. 
-- Be sure to make your bochs source file SUCCESSFULY complied, or bochs might not run as expected.
+- Make sure your bochs source file is SUCCESSFULY complied, or bochs might not run as expected.
 - Run ``bochs -f <your-path>/MINEboot/myBochsScript.txt``.
 
 # TODO
